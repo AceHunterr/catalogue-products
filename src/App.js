@@ -1,9 +1,15 @@
 import './App.css';
+import {Routes,Route,BrowserRouter} from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      Hello, this is the main page 
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" exact element={<Home />}></Route> 
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
