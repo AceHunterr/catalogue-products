@@ -34,13 +34,15 @@ const Home = () => {
         <div className='jobcard-container' style={{ display: 'flex', flexWrap: 'wrap',justifyContent: 'center',gap:'50px'}}>
                   {productsContents.map(contents => (
                       <ItemCard
-                        key={contents.price}
+                        // key={contents.Price}
+                        price={contents.Price}
                         image={contents.img_src}
                         job_title={contents.Title}
                         company={contents.Handle}
                         view={contents.tag1}
                         share={contents.tag2}
-                        tags = {contents.Color}
+                        color = {contents.Color}
+                        size = {contents.Size}
                         job_type = {contents.job_type}
                         work_type = "work_type_job"
                         // onSaveCard={handleSaveCard} 

@@ -113,9 +113,10 @@
      margin: 1rem;
      flex: 1 0 25rem;
      max-width: 30rem;
-     max-height: 50rem;
+     max-height: 54rem;
      transition: 0.3s;
      color: var(--color-secondary-black);
+     border-radius: 5%;
    }
    
    .jobCard:hover {
@@ -126,52 +127,49 @@
      background-clip: text;
      -webkit-background-clip: text;
      color: transparent;
-     cursor: pointer;
+     /* cursor: pointer; */
    }
    
    
-   .jobCard__wishlist {
-     position: absolute;
-     top: 1rem;
-     right: 1rem;
-     font-size: 2rem;
-     
-     cursor: pointer;
-     color: var(--color-grey-primary);
-   }
    
-   .jobCard__wishlist:hover {
-     transition: 0.3s;
-     color: white;
-   }
    
    .jobCard__content {
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     padding: 2rem;
+
+    }
+    
+    .jobCard__header {
+      /* display: flex; */
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    
+    .jobCard__footer{
+     padding: 0.3rem 1.5rem 2rem;
    }
-   
-   .jobCard__header {
-     /* display: flex; */
-     align-items: center;
-     justify-content: space-between;
-     padding-bottom: 2rem;
-   }
-   
    .jobImage {
-     max-width: 100%;
-     height: auto;
+     width: 100%;
+     height: 35rem;
      margin-right: 1rem;
      border-radius: 5%;
+     transition: ease-in-out 0.5s;
+   }
+   .jobImage:hover{
+    transform: scale(1.2) translateX(-34px) translateY(-12px);
    }
    
    .jobName {
-     font-size: 1.5rem;
-     margin-top: 1rem;
+     font-size: 1.2rem;
+     margin-top: 0.7rem;
      flex-grow: 1;
-     transition: 0.1s;
-     
+     transition: 0.1s; 
+   }
+   
+   #product-price{
+    font-size: 2rem;
    }
    .jobName:hover{
      transition: 0.4s;
@@ -190,17 +188,25 @@
    }
    
    .displayStack__1 {
+    padding-top: 12px;
      display: flex;
+     flex-direction: column;
      justify-content: space-between;
      align-items: flex-start;
    }
+   
    
    .tagsContainer {
      display: flex;
      align-items: flex-start;
      margin-top: 10px;
    }
-   
+   .priceContainer {
+     display: flex;
+     flex-direction: row;
+     justify-content:end ;
+     margin-top: 10px;
+   }
    .tagItem {
      display: inline-block;
      padding: 4px 8px;
